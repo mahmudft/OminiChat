@@ -1,10 +1,11 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
+import {ChatListPage} from './src/pages/ChatListPage.js';
 
 function App(): React.JSX.Element {
   return (
     <View>
-      <Text> SALAM</Text>
+      <ChatListPage />
     </View>
   );
 }
