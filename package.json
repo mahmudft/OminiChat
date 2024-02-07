@@ -10,8 +10,16 @@
     "test": "jest"
   },
   "dependencies": {
+    "@mockoon/serverless": "^6.2.0",
+    "@react-navigation/bottom-tabs": "^6.5.11",
+    "@react-navigation/native": "^6.1.9",
+    "axios": "^1.6.7",
     "react": "18.2.0",
     "react-native": "0.73.1",
+    "react-native-image-picker": "^7.1.0",
+    "react-native-safe-area-context": "^4.9.0",
+    "react-native-screens": "^3.29.0",
+    "react-native-vector-icons": "^10.0.3",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {

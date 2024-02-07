@@ -1,22 +1,24 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import {Pressable} from 'react-native';
-// import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 function HeaderContainer() {
+
+ 
   return (
     <HeaderView>
       <HeaderTextContainer>
         <Header>Chats</Header>
       </HeaderTextContainer>
-      {/* <IconContainer>
+      <IconContainer>
         <Pressable>
           <Icon name="message-plus-outline" size={30} color="white" />
         </Pressable>
         <Pressable>
-          <Icon name="message-plus-outline" size={30} color="white" />
+          <Icon name="playlist-check" size={30} color="white" />
         </Pressable>
-      </IconContainer> */}
+      </IconContainer>
     </HeaderView>
   );
 }
@@ -32,9 +34,7 @@ const HeaderView = styled.View`
   width: auto;
   height: 100px;
   flex-shrink: 0;
-  border-bottom-width: 1px;
-  border-bottom-color: #192842;
-  border-bottom-style: solid;
+
 `;
 
 const HeaderTextContainer = styled.View`

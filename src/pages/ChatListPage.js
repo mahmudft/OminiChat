@@ -1,11 +1,13 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import HeaderContainer from '../components/chatListPage/HeaderContainer';
+import StatusContainer from '../components/chatListPage/StatusContainer';
 
 function ChatListPage() {
   return (
     <Wrapper>
       <HeaderContainer />
+      <StatusContainer />
     </Wrapper>
   );
 }
