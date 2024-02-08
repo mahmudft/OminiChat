@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {Pressable} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-function HeaderContainer() {
+function ChatHeader() {
 
  
   return (
@@ -22,7 +22,7 @@ function HeaderContainer() {
     </HeaderView>
   );
 }
-export default HeaderContainer;
+export default ChatHeader;
 
 const HeaderView = styled.View`
   display: flex;

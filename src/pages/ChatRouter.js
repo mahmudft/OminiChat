@@ -2,7 +2,7 @@
 import * as React from 'react';
 import {Text} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import ChatListPage from './ChatListPage';
+import ChatListPage from './ChatPage';
 import MorePage from './MorePage';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import ContactListPage from './ContactListPage';

@@ -1,0 +1,1 @@
+export  const NIGHT_COLOR='#0f1828';

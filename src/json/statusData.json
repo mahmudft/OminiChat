@@ -1,8 +1,34 @@
-
-{"statusData":[
-
-    {
-        "name":"Durna",
-        "image":"https://m.media-amazon.com/images/M/MV5BMTY0OTY3ODA3OV5BMl5BanBnXkFtZTcwMzMyMzQ1NQ@@._V1_.jpg"
-    }
-]}
+{
+    "statusData": [
+        {
+            "id": 1,
+            "name": "Durna",
+            "image": "https://m.media-amazon.com/images/M/MV5BMTY0OTY3ODA3OV5BMl5BanBnXkFtZTcwMzMyMzQ1NQ@@._V1_.jpg"
+        },
+        {
+            "id": 2,
+            "name": "durnn Abasov",
+            "image":null
+        },
+        {
+            "id": 3,
+            "name": "Alikonda",
+            "image": "https://m.media-amazon.com/images/M/MV5BMTY0OTY3ODA3OV5BMl5BanBnXkFtZTcwMzMyMzQ1NQ@@._V1_.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Crocodile",
+            "image": "https://m.media-amazon.com/images/M/MV5BMTY0OTY3ODA3OV5BMl5BanBnXkFtZTcwMzMyMzQ1NQ@@._V1_.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Crocodile",
+            "image": "https://m.media-amazon.com/images/M/MV5BMTY0OTY3ODA3OV5BMl5BanBnXkFtZTcwMzMyMzQ1NQ@@._V1_.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Crocodile",
+            "image": "https://m.media-amazon.com/images/M/MV5BMTY0OTY3ODA3OV5BMl5BanBnXkFtZTcwMzMyMzQ1NQ@@._V1_.jpg"
+        }
+    ]
+}

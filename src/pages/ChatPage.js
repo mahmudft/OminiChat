@@ -1,13 +1,14 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import HeaderContainer from '../components/chatListPage/HeaderContainer';
-import StatusContainer from '../components/chatListPage/StatusContainer';
+import { NIGHT_COLOR } from '../consts';
+import ChatHeader from '../components/ChatPage/ChatHeader';
+import ChatStatus from '../components/ChatPage/ChatStatus';
 
 function ChatListPage() {
   return (
     <Wrapper>
-      <HeaderContainer />
-      <StatusContainer />
+      <ChatHeader />
+      <ChatStatus />
     </Wrapper>
   );
 }
@@ -18,6 +19,6 @@ const Wrapper = styled.View`
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #0f1828;
+  background-color: ${NIGHT_COLOR};
   border-radius: 0px;
 `;
