@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Pressable, ScrollView, Text, View, Image } from "react-native";
+import { Pressable, ScrollView, Text, View, Image, Dimensions } from "react-native";
 import { useIsFocused } from '@react-navigation/native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import styled from 'styled-components';
@@ -8,8 +8,8 @@ import { useStatusData } from '../../hooks/hooks';
 import { firstLetters, modifyName } from '../../utils/utils';
 import LinearGradient from 'react-native-linear-gradient';
 import { NIGHT_COLOR } from '../../consts';
+import { RFValue } from 'react-native-responsive-fontsize';
 const { useEffect } = require("react");
-
 
 function ChatStatus() {
     const statusData = useStatusData();
@@ -17,7 +17,6 @@ function ChatStatus() {
     useEffect(() => {
     }, [isFocused])
     const openImagePicker = () => {
-        console.log("salam")
         const options = {
             mediaType: 'photo',
             includeBase64: false,
@@ -38,11 +37,11 @@ function ChatStatus() {
     };
     return (
         <View style={style.container}>
-            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}> 
                 <View style={style.statusBox}>
                     <View style={[style.myPhoto, style.borderWhite]}>
                         <Pressable onPress={openImagePicker}>
-                            <Icon name="plus" size={30} color="white" />
+                            <Icon name="plus" size={RFValue(22)} color="white" />
                         </Pressable>
                     </View>
                     <Text style={style.userName}>My photo</Text>
@@ -55,7 +54,7 @@ function ChatStatus() {
                             start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }}
                             colors={['white', 'purple', 'blue']} style={[style.fileUpload]}>
                             <View style={style.gradientContainer}>
-                                {data.image?.length>0 ? <Image source={{ uri: data.image }} style={{ width: 62, height: 62, borderRadius: 15 }} /> 
+                                {data.image?.length>0 ? <Image source={{ uri: data.image }} style={style.imageStyle} /> 
                                 : <View style={style.emptyImage}>
                                     <Text style={style.emptyImageText}>{firstLetters(data.name)}</Text>
                                 </View>
@@ -77,61 +76,71 @@ export default ChatStatus;
 
 
 const style = {
+    imageStyle:{ 
+        width:RFValue(43),
+        height:RFValue(43),
+        aspectRatio: 1, 
+        borderRadius: RFValue(9)
+    },
 
     container: {
-        height: 120,
+        height: "13%",
         paddingTop: 0,
         flexDirection: "row",
         borderBottomWidth: 1,
         borderBottomStyle: 'solid',
         borderBottomColor: '#192842',
         paddingLeft: 15,
-        paddingBottom: 10
+        paddingBottom: RFValue(5),
+        alignItems:"center",
+        justifyContent:"center"
     },
 
     statusBox: {
         alignSelf: "flex-end",
-        margin: 7,
+        margin: RFValue(5),
     },
     userName: {
         color: "white",
         alignSelf: "center",
-        fontSize: 11
+       fontSize:RFValue(8),
     },
     fileUpload: {
-        width: 72,
-        height: 72,
-        // borderWidth: 2,
-        // borderStyle: "solid",
-        borderRadius: 18,
+        aspectRatio: 1,
+        height: RFValue(52),
+        width: RFValue(52),
+        borderRadius: RFValue(12),
         marginBottom: 5,
         alignItems: "center",
         justifyContent: "center",
     },
     gradientContainer: {
         backgroundColor: NIGHT_COLOR,
-        borderRadius: 18,
-        width: 69,
-        height: 69,
+        borderRadius: RFValue(12),
+        width: RFValue(49),
+        height: RFValue(49),
+        aspectRatio: 1,
         alignItems: "center",
         justifyContent: "center",
 
     },
     myPhoto: {
-        width: 70,
-        height: 70,
+        height: RFValue(49.5),
+        width: RFValue(49.5),
+        aspectRatio: 1,
         borderWidth: 2,
         borderStyle: "solid",
-        borderRadius: 18,
-        marginBottom: 5,
+        borderRadius: RFValue(12),
+        marginBottom: RFValue(5),
         alignItems: "center",
         justifyContent: "center",
     },
 
     emptyImage: {
-        width: 62,
-        height: 62,
-        borderRadius: 15,
+        width:RFValue(43),
+        height:RFValue(43),
+        borderRadius: RFValue(9),
+        aspectRatio:1,
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: '#375FFF',
@@ -140,15 +149,10 @@ const style = {
 
     emptyImageText: {
         color: 'white',
-        fontSize: 27,
+        fontSize: RFValue(22),
         fontWeight:500,
     },
 
-
-    borderGradientPurple: {
-        borderImageSource: 'linear-gradient(to left, #743ad5, #d53a9d)',
-        // Diğer gerekli stiller...
-    },
     borderWhite: {
         borderColor: "white",
     }

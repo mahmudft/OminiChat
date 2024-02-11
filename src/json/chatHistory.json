@@ -1,0 +1,28 @@
+{
+    "chatHistory": [
+        {
+            "chatId": "1",
+            "userName": "Durna Hasanova",
+            "lastMessage": "Salam Necese?",
+            "lastMessageDateTime": "2024-02-09T14:15:22",
+            "newMessageCount": 1,
+            "image": "https://m.media-amazon.com/images/M/MV5BMTY0OTY3ODA3OV5BMl5BanBnXkFtZTcwMzMyMzQ1NQ@@._V1_.jpg"
+        },
+        {
+            "chatId": "2",
+            "userName": "Ali Hasanova",
+            "lastMessage": "Ola?",
+            "lastMessageDateTime": "2024-02-01T14:15:22",
+            "newMessageCount": 3,
+            "image": ""
+        },
+        {
+            "chatId": "3",
+            "userName": "Afaq Hasanova",
+            "lastMessage": "Kak dela?",
+            "lastMessageDateTime": "2024-02-06T14:15:22",
+            "newMessageCount": 0,
+            "image": "https://m.media-amazon.com/images/M/MV5BMTY0OTY3ODA3OV5BMl5BanBnXkFtZTcwMzMyMzQ1NQ@@._V1_.jpg"
+        }
+    ]
+}

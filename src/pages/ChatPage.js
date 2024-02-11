@@ -3,12 +3,18 @@ import styled from 'styled-components';
 import { NIGHT_COLOR } from '../consts';
 import ChatHeader from '../components/ChatPage/ChatHeader';
 import ChatStatus from '../components/ChatPage/ChatStatus';
+import ChatList from '../components/ChatPage/ChatList';
+import { useChatHistory } from '../hooks/hooks';
+import { Dimensions } from 'react-native';
+
 
 function ChatListPage() {
+  const chatHistory= useChatHistory()
   return (
     <Wrapper>
       <ChatHeader />
       <ChatStatus />
+      <ChatList chatHistoryList={chatHistory}/>
     </Wrapper>
   );
 }

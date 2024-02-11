@@ -1,11 +1,11 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import {Pressable} from 'react-native';
+import {Dimensions, Pressable} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { RFValue } from 'react-native-responsive-fontsize';
+const {width, height}= Dimensions.get("window");
 
 function ChatHeader() {
-
- 
   return (
     <HeaderView>
       <HeaderTextContainer>
@@ -13,10 +13,10 @@ function ChatHeader() {
       </HeaderTextContainer>
       <IconContainer>
         <Pressable>
-          <Icon name="message-plus-outline" size={30} color="white" />
+          <Icon name="message-plus-outline" size={RFValue(20)} color="white" />
         </Pressable>
         <Pressable>
-          <Icon name="playlist-check" size={30} color="white" />
+          <Icon name="playlist-check" size={RFValue(23)} color="white" />
         </Pressable>
       </IconContainer>
     </HeaderView>
@@ -28,28 +28,29 @@ const HeaderView = styled.View`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding-top: 30px;
-  padding-left: 13px;
+  margin-top: ${RFValue(20)}px;
+  padding-left: ${RFValue(1)}px;
+  padding-right: ${RFValue(10)}px;
+  margin-bottom: ${RFValue(3)}px;
   gap: 14px;
-  width: auto;
-  height: 100px;
+  width: 100%;
+  height:8%;
   flex-shrink: 0;
-
 `;
 
 const HeaderTextContainer = styled.View`
-  flex: 1 0 70%;
+  flex: 4;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
   align-self: stretch;
   width: 70%;
-  margin-top: 20px;
+  margin-top: ${RFValue(10)}px;
   padding-left: 20px;
 `;
 const IconContainer = styled.View`
-  flex: 1 1 30%;
+  flex: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -57,13 +58,12 @@ const IconContainer = styled.View`
   align-self: stretch;
   width: 30%;
   margin-top: 20px;
-  margin-right: 20px;
-  padding-left: 10px;
+  padding-left: 21px;
 `;
 const Header = styled.Text`
   color: #f7f7fc;
   font-family: Mulish;
-  font-size: 20px;
+  font-size: ${RFValue(20)}px;
   font-style: normal;
   font-weight: bold;
 `;

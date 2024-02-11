@@ -17,3 +17,19 @@ export function useStatusData() {
     }, []);
     return data;
 }
+
+export function useChatHistory() {
+    // console.log('useStatusData')
+     const [data, setData] = useState(null);
+     useEffect(() => {
+         axios.get(url + '/chatHistory')
+             .then((res) => {
+                
+                 setData(res.data.chatHistory); // Gelen veriyi state'e ata
+             })
+             .catch((err) => {
+                 console.log(err);
+             });
+     }, []);
+     return data;
+ }
