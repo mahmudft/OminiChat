@@ -1,30 +1,20 @@
 /* eslint-disable react/no-unstable-nested-components */
-import * as React from 'react';
-import {Text, View} from 'react-native';
+import React from 'react';
+import {Appearance, Text, View} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import ChatListPage from './ChatPage';
 import MorePage from './MorePage';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import ContactListPage from './ContactListPage';
 import { RFValue } from 'react-native-responsive-fontsize';
+import { colors } from '../colors';
 const Tab = createBottomTabNavigator();
 
 function ChatRouter() {
+ 
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
-        // tabBarLabel: ({focused})=>{
-        //     let labelName;
-        //     if (route.name === 'ChatList') {
-        //         labelName = !focused ? null : 'Chats';
-        //       } else if (route.name === 'More') {
-        //         labelName = !focused ? null : 'More';
-        //       } else if (route.name === 'ContactList') {
-        //         labelName = !focused ? null : 'Contacts';
-        //       }
-              
-        //       return <Text style={style.tabBarLabel}>{labelName}</Text>
-        // },
         tabBarShowLabel:false,
         tabBarStyle: style.tabBarStyle,
         tabBarIcon: ({focused}) => {
@@ -43,7 +33,7 @@ function ChatRouter() {
           
           return <View style={style.tabBarIconBox}>
             {focused?<Text style={style.tabBarLabel}>{labelName}</Text>:null}
-            <Icon name={iconName} size={RFValue(20)} color="white"/>
+            <Icon name={iconName} size={RFValue(20)} color={colors.iconColor}/>
             </View>
         },
       })}>
@@ -72,7 +62,7 @@ export default ChatRouter;
 const style = {
   tabBarStyle: {
     position: 'absolute',
-    backgroundColor: '#0f1828',
+    backgroundColor: colors.background,
     height:RFValue(53),
 
   },
@@ -84,7 +74,7 @@ const style = {
     
   },
   tabBarLabel:{
-    color:"white",
+    color:colors.textWhiteColor,
     fontSize:RFValue(12),
     fontWeight:600,
     marginTop:RFValue(14),

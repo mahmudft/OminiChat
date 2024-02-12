@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {Dimensions, Pressable} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { RFValue } from 'react-native-responsive-fontsize';
+import { colors } from '../../colors';
 const {width, height}= Dimensions.get("window");
 
 function ChatHeader() {
@@ -13,10 +14,10 @@ function ChatHeader() {
       </HeaderTextContainer>
       <IconContainer>
         <Pressable>
-          <Icon name="message-plus-outline" size={RFValue(20)} color="white" />
+          <Icon name="message-plus-outline" size={RFValue(20)} color={colors.iconColor} />
         </Pressable>
         <Pressable>
-          <Icon name="playlist-check" size={RFValue(23)} color="white" />
+          <Icon name="playlist-check" size={RFValue(23)} color={colors.iconColor} />
         </Pressable>
       </IconContainer>
     </HeaderView>
@@ -61,7 +62,7 @@ const IconContainer = styled.View`
   padding-left: 21px;
 `;
 const Header = styled.Text`
-  color: #f7f7fc;
+  color: ${colors.textWhiteColor};
   font-family: Mulish;
   font-size: ${RFValue(20)}px;
   font-style: normal;

@@ -5,6 +5,7 @@ import { IMAGE_TEMPLATE } from '../../consts';
 import getMessageTime, { firstLetters } from '../../utils/utils';
 import { isSearchBarAvailableForCurrentPlatform } from 'react-native-screens';
 import { RFValue } from 'react-native-responsive-fontsize';
+import { colors } from '../../colors';
 
 
 function MessageCard({ chatDetails }) {
@@ -51,19 +52,19 @@ const styles = {
     userNameText: {
         fontSize:  RFValue(12),
         fontWeight: '600',
-        color: "#F7F7FC",
+        color: colors.textWhiteColor,
         lineHeight: 24
     },
     messageText: {
         fontSize:  RFValue(10),
         fontWeight: '400',
-        color: "#ADB5BD",
+        color:colors.chatTextColor,
         lineHeight: 20
     },
     dateText: {
         fontSize:  RFValue(9),
         fontWeight: '400',
-        color: "#ADB5BD",
+        color: colors.chatTextColor,
         lineHeight: 30
     },
     badgeText: {
@@ -77,7 +78,7 @@ const styles = {
         borderWidth: 2,
         width: 12,
         height: 12,
-        borderColor: "white",
+        borderColor: colors.borderColor,
         borderStyle: "solid",
         borderRadius: 20
 
@@ -118,13 +119,13 @@ const styles = {
         aspectRatio: 1, 
         borderStyle: "solid",
         borderWidth: 2,
-        borderColor: "white",
+        borderColor: colors.borderColor,
         justifyContent: "center",
         alignItems: "center"
     },
 
     emptyImageText: {
-        color: 'white',
+        color: colors.textWhiteColor,
         fontSize:  RFValue(16),
         fontWeight: 600,
     }

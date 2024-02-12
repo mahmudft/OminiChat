@@ -1,6 +1,7 @@
 import { View, TextInput } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { colors } from '../../colors';
 
 function SearchBar() {
     return (
@@ -23,7 +24,7 @@ const style = {
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#152033',
+        backgroundColor: colors.searchBarBackgroundcolor,
         borderRadius:5,
         height:RFValue(30),
         margin:RFValue(3),
@@ -32,10 +33,10 @@ const style = {
     },
     searchIcon: {
         padding: RFValue(8),
-        color:'#ADB5BD',
+        color:colors.searchIconColor,
     },
     input: {
         flex: 1,
-        color: '#ADB5BD',
+        color: colors.searchInputColor,
     },
 }

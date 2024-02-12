@@ -9,6 +9,7 @@ import { firstLetters, modifyName } from '../../utils/utils';
 import LinearGradient from 'react-native-linear-gradient';
 import { NIGHT_COLOR } from '../../consts';
 import { RFValue } from 'react-native-responsive-fontsize';
+import { colors } from '../../colors';
 const { useEffect } = require("react");
 
 function ChatStatus() {
@@ -41,7 +42,7 @@ function ChatStatus() {
                 <View style={style.statusBox}>
                     <View style={[style.myPhoto, style.borderWhite]}>
                         <Pressable onPress={openImagePicker}>
-                            <Icon name="plus" size={RFValue(22)} color="white" />
+                            <Icon name="plus" size={RFValue(22)} color={colors.iconColor} />
                         </Pressable>
                     </View>
                     <Text style={style.userName}>My photo</Text>
@@ -89,7 +90,7 @@ const style = {
         flexDirection: "row",
         borderBottomWidth: 1,
         borderBottomStyle: 'solid',
-        borderBottomColor: '#192842',
+        borderBottomColor: colors.chatBottomBorderColor,
         paddingLeft: 15,
         paddingBottom: RFValue(5),
         alignItems:"center",
@@ -115,7 +116,7 @@ const style = {
         justifyContent: "center",
     },
     gradientContainer: {
-        backgroundColor: NIGHT_COLOR,
+        backgroundColor: colors.background,
         borderRadius: RFValue(12),
         width: RFValue(49),
         height: RFValue(49),
@@ -130,6 +131,7 @@ const style = {
         aspectRatio: 1,
         borderWidth: 2,
         borderStyle: "solid",
+        
         borderRadius: RFValue(12),
         marginBottom: RFValue(5),
         alignItems: "center",
@@ -154,7 +156,7 @@ const style = {
     },
 
     borderWhite: {
-        borderColor: "white",
+        borderColor: colors.borderColor,
     }
 
 }

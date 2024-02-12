@@ -6,6 +6,7 @@ import ChatStatus from '../components/ChatPage/ChatStatus';
 import ChatList from '../components/ChatPage/ChatList';
 import { useChatHistory } from '../hooks/hooks';
 import { Dimensions } from 'react-native';
+import { colors } from '../colors';
 
 
 function ChatListPage() {
@@ -25,6 +26,6 @@ const Wrapper = styled.View`
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: ${NIGHT_COLOR};
+  background-color: ${colors.background};
   border-radius: 0px;
 `;
