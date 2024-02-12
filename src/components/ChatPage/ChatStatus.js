@@ -12,11 +12,9 @@ import { RFValue } from 'react-native-responsive-fontsize';
 import { colors } from '../../colors';
 const { useEffect } = require("react");
 
-function ChatStatus() {
-    const statusData = useStatusData();
-    const isFocused = useIsFocused()
-    useEffect(() => {
-    }, [isFocused])
+function ChatStatus(props) {
+   
+    const {statusData}=props;
     const openImagePicker = () => {
         const options = {
             mediaType: 'photo',

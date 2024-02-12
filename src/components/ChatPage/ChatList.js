@@ -1,16 +1,21 @@
-import { View, Text, ScrollView } from 'react-native';
+import { View, Text, ScrollView, Pressable } from 'react-native';
 import SearchBar from './SearchBar';
-import { Badge, Image } from 'react-native-elements';
-import { IMAGE_TEMPLATE } from '../../consts';
+
 import MessageCard from './MessageCard';
 import { RFValue } from 'react-native-responsive-fontsize';
-import { colors } from '../../colors';
+import { useNavigation } from '@react-navigation/native';
 
 
 function ChatList({chatHistoryList}) {
+    const navigation = useNavigation();
 
+    const onPress=(userdata)=>{
+        console.log(userdata)
+       navigation.navigate("MessagePage", {data:userdata});
+       console.log("calisiyorum")
+    }
 
-    return (<View style={style.box}>
+    return (<View style={style.box} >
         <SearchBar />
         <ScrollView>
        <View style={{marginTop:RFValue(10)}}>
@@ -18,7 +23,10 @@ function ChatList({chatHistoryList}) {
             chatHistoryList?.sort((a, b)=> new Date(b.lastMessageDateTime)-new Date(Date.parse(a.lastMessageDateTime))).
                                 map((data, index)=>{
 
-                return (<MessageCard chatDetails={data} key={index}/>)
+                return (<Pressable key={index} onPress={()=>onPress(data)}>
+                    <MessageCard chatDetails={data} key={index}/>
+                    
+                    </Pressable>)
             })
         }
         
