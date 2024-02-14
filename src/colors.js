@@ -12,7 +12,8 @@ export const lightModeColors = {
     searchIconColor:"#ADB5BD",
     searchBarBackgroundcolor:"#E5E5E5",
     searchInputColor:"#ADB5BD",
-    chatBottomBorderColor:"#ADB5BD"
+    chatBottomBorderColor:"#ADB5BD",
+    imageUri:require("../assets/white.png")
 }
 
 export const darkModeColors = {
@@ -25,7 +26,8 @@ export const darkModeColors = {
   searchIconColor:"#ADB5BD",
   searchBarBackgroundcolor:"#152033",
   searchInputColor:"#ADB5BD",
-  chatBottomBorderColor:"#192842"
+  chatBottomBorderColor:"#192842",
+  imageUri:require('../assets/dark.png')
 
 }
 

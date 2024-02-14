@@ -3,7 +3,7 @@ import ChatRouter from './src/pages/ChatRouter.js';
 import { NavigationContainer } from '@react-navigation/native';
 import { Appearance } from 'react-native';
 import AppRouter from './AppRouter.js';
-
+import {colors} from './src/colors.js'
 
 
 
@@ -20,6 +20,8 @@ function App(): React.JSX.Element {
 }
 
 export default App;
+
+
 
 
 
