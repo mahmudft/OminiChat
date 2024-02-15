@@ -13,7 +13,8 @@ export const lightModeColors = {
     searchBarBackgroundcolor:"#E5E5E5",
     searchInputColor:"#ADB5BD",
     chatBottomBorderColor:"#ADB5BD",
-    imageUri:require("../assets/white.png")
+    imageUri:require("../assets/white.png"),
+    placeholderColor:"#59616e"
 }
 
 export const darkModeColors = {
@@ -24,10 +25,11 @@ export const darkModeColors = {
   iconColor:"white",
   chatTextColor:"#ADB5BD",
   searchIconColor:"#ADB5BD",
-  searchBarBackgroundcolor:"#152033",
+  searchBarBackgroundcolor:"#1d293d",
   searchInputColor:"#ADB5BD",
   chatBottomBorderColor:"#192842",
-  imageUri:require('../assets/dark.png')
+  imageUri:require('../assets/dark.png'),
+  placeholderColor:"#59616e"
 
 }
 

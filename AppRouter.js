@@ -8,11 +8,11 @@ import { RFValue } from 'react-native-responsive-fontsize';
 import { colors } from './src/colors';
 import { useNavigation } from '@react-navigation/native';
 import WelcomePage from './src/pages/WelcomePage';
+import OtpPage from './src/pages/OtpPage';
 
 const Stack = createNativeStackNavigator();
 
 function HeaderLeft({ userName }) {
-    ////
     const navigation = useNavigation();
     const onPress = () => {
         navigation.navigate("ChatList")
@@ -38,13 +38,13 @@ function HeaderLeft({ userName }) {
 }
 
 function AppRouter() {
-
     return (<Stack.Navigator>
         <Stack.Screen name='Welcome' component={WelcomePage} options={{headerShown:false}} />
-        <Stack.Screen name='Login' component={Login} options={{title:""}} />
+        <Stack.Screen name='Login' component={Login} options={{headerShown:false}} />
+        <Stack.Screen name='OtpPage' component={OtpPage} options={{headerShown:false}} />
         <Stack.Screen name='Chat' component={ChatRouter} options={{ headerShown: false }} />
         <Stack.Screen name='MessagePage' component={MessagePage}
-            options={({ route }) => ({
+                options={({ route }) => ({
                 headerStyle: styles.headerStyle,
                 title:"",
                 headerLeft: () => (<HeaderLeft userName={route.params.data.userName} />),
