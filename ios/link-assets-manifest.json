@@ -1,0 +1,69 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Mulish-Black.ttf",
+      "sha1": "45732c45a85c41474a627b449b06a2477c50b5cd"
+    },
+    {
+      "path": "src/assets/fonts/Mulish-BlackItalic.ttf",
+      "sha1": "e126dc5dab8e11149cf9a2619a51eeec56f1afab"
+    },
+    {
+      "path": "src/assets/fonts/Mulish-Bold.ttf",
+      "sha1": "97cb4086e384a1e2e8688985b7eb8cbbc63354cb"
+    },
+    {
+      "path": "src/assets/fonts/Mulish-BoldItalic.ttf",
+      "sha1": "4061617656058ea495a6483684d9f2a1ea5eff2c"
+    },
+    {
+      "path": "src/assets/fonts/Mulish-ExtraBold.ttf",
+      "sha1": "eab0fa8dcde903b5fdec3bfe94c645f48cf0bf7d"
+    },
+    {
+      "path": "src/assets/fonts/Mulish-ExtraBoldItalic.ttf",
+      "sha1": "9e579b3d29c5473a7ef497ba4adb5c252a536c7a"
+    },
+    {
+      "path": "src/assets/fonts/Mulish-ExtraLight.ttf",
+      "sha1": "504e63dd1df7fa7f77d34b9fa85a7cc0dc848c48"
+    },
+    {
+      "path": "src/assets/fonts/Mulish-ExtraLightItalic.ttf",
+      "sha1": "d70b63f3e56130131cb32227644ba40964440835"
+    },
+    {
+      "path": "src/assets/fonts/Mulish-Italic.ttf",
+      "sha1": "25329363869c1fa530a6b32dfa72268c723963f8"
+    },
+    {
+      "path": "src/assets/fonts/Mulish-Light.ttf",
+      "sha1": "25efbd3c907aa50302047815ce8049bed0b613e2"
+    },
+    {
+      "path": "src/assets/fonts/Mulish-LightItalic.ttf",
+      "sha1": "8fbfbc6f4a485e6394593bf8b70e27d0ba9b91de"
+    },
+    {
+      "path": "src/assets/fonts/Mulish-Medium.ttf",
+      "sha1": "6201b3d5d10905f878860861d4e7ebcca6ca3936"
+    },
+    {
+      "path": "src/assets/fonts/Mulish-MediumItalic.ttf",
+      "sha1": "8ee9e83a95dab7a0f11d5c189f7071483ec35e82"
+    },
+    {
+      "path": "src/assets/fonts/Mulish-Regular.ttf",
+      "sha1": "65aa946a76999c7fe9a6b4478e9c35db9c80b137"
+    },
+    {
+      "path": "src/assets/fonts/Mulish-SemiBold.ttf",
+      "sha1": "0935586660615fe1c41fc1bc8aa3a5e0c8c744a8"
+    },
+    {
+      "path": "src/assets/fonts/Mulish-SemiBoldItalic.ttf",
+      "sha1": "007622927fe66ef3fbe8fb786efb845f636f1c45"
+    }
+  ]
+}
