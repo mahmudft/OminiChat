@@ -28,7 +28,6 @@ export default StyleSheet.create({
     width: '100%',
     height: '100%',
     display: 'flex',
-    // backgroundColor: '#FFFFFF',
     justifyContent: 'center',
     alignItems: 'center',
   },

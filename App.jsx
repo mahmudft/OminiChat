@@ -1,20 +1,16 @@
 import React from 'react';
-import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
 import Routes from './src/routes';
-import {Colors} from './src/theme';
+import {Provider} from 'react-redux';
+import store from './src/store';
 
 function App() {
   // const theme = useColorScheme() === 'dark' ? 'dark' : 'light';
   const theme = 'light';
 
   return (
-    // <SafeAreaView style={{}}>
-    //   <StatusBar
-    //     barStyle={theme === 'light' ? 'light-content' : 'dark-content'}
-    //     backgroundColor={'red'}
-    //   />
-    <Routes isLoggedIn={false} theme={theme} />
-    // </SafeAreaView>
+    <Provider store={store}>
+      <Routes isLoggedIn={false} theme={theme} />
+    </Provider>
   );
 }
 
