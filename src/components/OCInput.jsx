@@ -1,12 +1,14 @@
 import {TextInput, StyleSheet} from 'react-native';
 import {useTheme} from '@react-navigation/native';
 
-export const OCInput = ({placeholder}) => {
+export const OCInput = ({placeholder, handleChange}) => {
   const colors = useTheme().colors;
 
   const styles = styling(colors);
+
   return (
     <TextInput
+      onChangeText={handleChange}
       placeholder={placeholder}
       placeholderTextColor={colors.text}
       style={styles.input}
@@ -23,6 +25,7 @@ const styling = colors =>
       borderRadius: 4,
       paddingHorizontal: 8,
       paddingVertical: 6,
+      color: colors.text,
     },
     placeholder: {
       color: 'red',

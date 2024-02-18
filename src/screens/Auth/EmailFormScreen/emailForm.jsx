@@ -4,9 +4,43 @@ import gStyle from '../../../../globalStyle';
 import styles from '../WalkthroughScreen/styles';
 import {OCButton} from '../../../components/OCButton';
 import {OCInput} from '../../../components/OCInput';
+import {useState} from 'react';
+import {login} from '../../../services/auth';
 
 const EmailFormScreen = ({navigation}) => {
   const colors = useTheme().colors;
+
+  const [email, setEmail] = useState('');
+
+  const checkUserExists = async () => {
+    try {
+      const response = await fetch('http://localhost:3000/user/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({email: email}),
+      });
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+
+    navigation.navigate('OtpVerification');
+
+    // login({email: email, password: ''}).catch(error => {
+    //   console.log(error);
+    //   const isLogin = error.status !== 404;
+    //
+    //   const payload = {
+    //     redirectTo: isLogin ? 'PasswordInput' : 'ProfileCreate',
+    //     isLogin: isLogin,
+    //   };
+    //
+    //   // navigation.navigate('OtpVerification', payload);
+    // });
+  };
   return (
     <View
       style={[
@@ -16,7 +50,7 @@ const EmailFormScreen = ({navigation}) => {
         styles.container,
         gStyle.pageContainer,
       ]}>
-      <View style={{width: '100%', rowGap: 60}}>
+      <View style={{width: '100%', rowGap: 60, marginTop: '20%'}}>
         <View style={{rowGap: 10}}>
           <Text style={[gStyle.header, {color: colors.text}]}>
             Enter Your Email Address
@@ -25,10 +59,10 @@ const EmailFormScreen = ({navigation}) => {
             Please enter your email address
           </Text>
         </View>
-        <OCInput placeholder={'Email Address'} />
+        <OCInput placeholder={'Email Address'} handleChange={setEmail} />
       </View>
       <View style={{width: '100%'}}>
-        <OCButton title={'Continue'} handlePress={() => {}} />
+        <OCButton title={'Continue'} handlePress={checkUserExists} />
       </View>
     </View>
   );

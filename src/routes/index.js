@@ -5,6 +5,7 @@ import {AuthStack} from './AuthStack';
 import React from 'react';
 import {StatusBar} from 'react-native';
 import {Colors} from '../theme';
+import {AppTab} from './AppTab';
 
 const Stack = createStackNavigator();
 const RootStack = createStackNavigator();
@@ -18,15 +19,16 @@ export const Router = ({isLoggedIn, theme}) => {
         barStyle={theme === 'light' ? 'dark-content' : 'light-content'}
         backgroundColor={theme === 'light' ? '#FFFFFF' : '#0F1828'}
       />
+
       <Stack.Navigator
         screenOptions={{
           gestureEnabled: true,
           headerShown: false,
         }}>
-        {!isLoggedIn ? (
+        {isLoggedIn ? (
           <RootStack.Screen
-            name="Auth"
-            component={AuthStack}
+            name="App"
+            component={AppTab}
             options={{
               animationEnabled: false,
             }}

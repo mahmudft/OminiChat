@@ -3,6 +3,8 @@ import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {WalkthroughScreen} from '../screens';
 import EmailFormScreen from '../screens/Auth/EmailFormScreen';
 import {useTheme} from '@react-navigation/native';
+import OtpVerificationScreen from '../screens/Auth/OtpVerificationScreen';
+import ProfileCreateScreen from '../screens/Auth/ProfileCreateScreen';
 
 const Stack = createStackNavigator();
 
@@ -36,10 +38,24 @@ export const AuthStack = () => {
       />
       <Stack.Screen
         options={{
-          title: 'Email Form',
+          title: '',
         }}
         name="EmailForm"
         component={EmailFormScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: '',
+        }}
+        name="OtpVerification"
+        component={OtpVerificationScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Your Profile',
+        }}
+        name="ProfileCreate"
+        component={ProfileCreateScreen}
       />
     </Stack.Navigator>
   );
