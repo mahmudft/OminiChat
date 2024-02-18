@@ -27,6 +27,8 @@ const EmailFormScreen = ({navigation}) => {
       console.error(error);
     }
 
+    navigation.navigate('OtpVerification');
+
     // login({email: email, password: ''}).catch(error => {
     //   console.log(error);
     //   const isLogin = error.status !== 404;

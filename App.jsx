@@ -5,11 +5,11 @@ import store from './src/store';
 
 function App() {
   // const theme = useColorScheme() === 'dark' ? 'dark' : 'light';
-  const theme = 'light';
+  const theme = 'dark';
 
   return (
     <Provider store={store}>
-      <Routes isLoggedIn={false} theme={theme} />
+      <Routes isLoggedIn={true} theme={theme} />
     </Provider>
   );
 }

@@ -31,31 +31,31 @@ const WalkthroughScreen = ({navigation}) => {
         </Text>
 
         {/*Test Redux*/}
-        <Text>
-          {auth.userSignedIn ? 'User Signed In' : 'User Not Signed In'}
-        </Text>
+        {/*<Text>*/}
+        {/*  {auth.userSignedIn ? 'User Signed In' : 'User Not Signed In'}*/}
+        {/*</Text>*/}
 
-        <View
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-          }}>
-          <OCButton
-            variant={'ghost'}
-            title={'SignIn'}
-            handlePress={() => {
-              signInUser({});
-            }}
-          />
-          <OCButton
-            variant={'ghost'}
-            title={'LogOut'}
-            handlePress={() => {
-              logOutUser();
-            }}
-          />
-        </View>
+        {/*<View*/}
+        {/*  style={{*/}
+        {/*    display: 'flex',*/}
+        {/*    flexDirection: 'row',*/}
+        {/*    justifyContent: 'space-between',*/}
+        {/*  }}>*/}
+        {/*  <OCButton*/}
+        {/*    variant={'ghost'}*/}
+        {/*    title={'SignIn'}*/}
+        {/*    handlePress={() => {*/}
+        {/*      signInUser({});*/}
+        {/*    }}*/}
+        {/*  />*/}
+        {/*  <OCButton*/}
+        {/*    variant={'ghost'}*/}
+        {/*    title={'LogOut'}*/}
+        {/*    handlePress={() => {*/}
+        {/*      logOutUser();*/}
+        {/*    }}*/}
+        {/*  />*/}
+        {/*</View>*/}
       </View>
       {/*<View style={{width: '100%', height: 120}}>*/}
       <OCButton
